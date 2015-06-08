@@ -1,0 +1,16 @@
+<!-- render the page with a new random grid of words, and the HTML form to write your guess just below the word-grid. -->
+<h1>  Welcome to the longest word-game ! </h1>
+
+  <h2> Here is your grid : </h2>
+    <p> [<%= @grid.join(" ") %> ]</p>
+
+
+  <form action="/score">
+    <label for="question">What's your best shot?</label> <br>
+    <input type="hidden" name="starttime" value= "<%= Time.now.to_i %>" >
+    <input type="hidden" name="grid" value= "<%= @grid.join("") %>" >
+    <input type="text" id="attempt" name="attempt" placeholder="Type your word here">
+    <br>
+    <input type="submit" value="Take it or leave it!">
+  </form>
+

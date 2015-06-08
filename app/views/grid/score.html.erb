@@ -1,0 +1,11 @@
+<!-- should compute and display your score -->
+<h1>Your score</h1>
+
+<h3> Grid: [<%= @grid %> ]</h3>
+  <ul>
+    <li> Your word: <%= @attempt %> </li>
+    <li> Time elapsed: <%= @result.fetch(:time) %> sec. </li>
+    <li> Translation: <%= @result.fetch(:translation) %> </li>
+    <li> Your score: <%= @result.fetch(:score) %> </li>
+    <li> Message: <%= @result.fetch(:message) %> </li>
+  </ul>
